@@ -1,30 +1,17 @@
-# User Info
-User:
+
+user:
   name: "Aritra"
   github: "safari"
 
-# Runtime Config
-# CHANGED: Switched from "3.11-slim" to "3.11" to include build tools (GCC/Rust)
 runtime:
-  image: "python:3.11"
+  image: "python:3.11-slim"
 
-# Build & Start
 commands:
+  package: ""
   build:
-    # 1. Upgrade pip first to avoid legacy build errors
-    - "pip install --upgrade pip setuptools wheel"
-    # 2. Install dependencies
     - "pip install -r requirements.txt"
-  
-  # Ensure your script is named 'main.py' in your repo!
   start: "python bot.py"
-
-# Environment Variables
-# We leave this empty/commented out so the server uses the Secrets 
-# you added in the Dashboard (GEMINI_API_KEY, TELEGRAM_BOT_TOKEN).
-# env: 
 
 repository:
   branch: "main"
   auto_deploy: true
-  
