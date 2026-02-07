@@ -17,7 +17,7 @@ commands:
     - "pip install -r requirements.txt"
   
   # Ensure your script is named 'main.py' in your repo!
-  start: "python main.py"
+  start: "python bot.py"
 
 # Environment Variables
 # We leave this empty/commented out so the server uses the Secrets 
