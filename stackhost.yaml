@@ -11,13 +11,12 @@ runtime:
 commands:
   build:
     - "pip install -r requirements.txt"
-  start: "python main.py" # Ensure your file is named main.py!
+  start: "python main.py" 
 
-# Environment Variables (CRITICAL)
-env:
-  GEMINI_API_KEY: "YOUR_GEMINI_KEY"
-  TELEGRAM_BOT_TOKEN: "YOUR_TELEGRAM_TOKEN"
+# Note: 'env' section removed. 
+# The server will automatically load the secrets you added in the Dashboard.
 
 repository:
   branch: "main"
   auto_deploy: true
+  
