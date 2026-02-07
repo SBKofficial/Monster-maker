@@ -1,0 +1,23 @@
+# User Info
+User:
+  name: "Aritra"
+  github: "safari"
+
+# Runtime Config
+runtime:
+  image: "python:3.11-slim"
+
+# Build & Start
+commands:
+  build:
+    - "pip install -r requirements.txt"
+  start: "python main.py" # Ensure your file is named main.py!
+
+# Environment Variables (CRITICAL)
+env:
+  GEMINI_API_KEY: "YOUR_GEMINI_KEY"
+  TELEGRAM_BOT_TOKEN: "YOUR_TELEGRAM_TOKEN"
+
+repository:
+  branch: "main"
+  auto_deploy: true
